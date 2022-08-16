@@ -17,11 +17,12 @@ async function main() {
   console.log("elonToken.address : ",elonToken.address);
 
   // ElonToken에 TokenId 1번으로 elon.PNG 민트
-  const mintTx = await elonToken.safeMint(wallet1.address, 1, "/bafyreibulpo7awvhokoa2tjzsloxz6sfhftp5nk7zes26tkk5ns7a5pjqq/metadata.json");
+  const mintTx = await elonToken.safeMint(wallet1.address, 1, "bafyreibulpo7awvhokoa2tjzsloxz6sfhftp5nk7zes26tkk5ns7a5pjqq/metadata.json");
   const receipt = await mintTx.wait();
   console.log(receipt)
   
-  const mintTx2 = await elonToken.safeMint(wallet1.address, 2, "/bafyreibutlf24m4s6wx3szvjgixhrdvxbw6wu5hvpvxkg6cp4nfg5amjkm/metadata.json");
+  // ElonToken에 TokenId 2번으로 elon2.PNG 민트
+  const mintTx2 = await elonToken.safeMint(wallet1.address, 2, "bafyreibutlf24m4s6wx3szvjgixhrdvxbw6wu5hvpvxkg6cp4nfg5amjkm/metadata.json");
   const receipt2 = await mintTx.wait();
   console.log(receipt2)
 }
@@ -33,8 +34,3 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 
-/*
-// Deploy the contract
-Contract Address : 0xacADF1f8d6d2693a6B2EE3fcdF176268FaB1289c
-https://rinkeby.etherscan.io/address/0xacADF1f8d6d2693a6B2EE3fcdF176268FaB1289c
-*/

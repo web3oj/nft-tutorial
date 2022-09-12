@@ -22,6 +22,12 @@ module.exports = {
       gas: 2100000,
       gasPrice: 8000000000
     },
+    goerli: {
+      url: process.env.GOERLI_URL,
+      accounts: [process.env.PRIVATE_KEY],
+      gas: 2100000,
+      gasPrice: 8000000000
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,

@@ -29,8 +29,10 @@ Token {
 
 ### 2. 해당 사진을 nft로 토큰화하고
 ```
-$ npx hardhat --network rinkeby run scripts/2_deploy.js
+$ npx hardhat --network goerli run scripts/2_deploy.js
 ```
+
+아래 과거 rinkeby에서 배포한 것
 - Contract Address : 0xacADF1f8d6d2693a6B2EE3fcdF176268FaB1289c
 - https://rinkeby.etherscan.io/address/0xacADF1f8d6d2693a6B2EE3fcdF176268FaB1289c
 - npx hardhat script 호출시 package.json의 type이 commonjs 형식이여야함
